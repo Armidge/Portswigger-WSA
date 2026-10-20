@@ -99,7 +99,7 @@ Ao logar na conta de Wiener, uma mudança simples no parâmetro `id` da URL (`/m
 
 Ao logar como `administrator:xxqtl10...`, vemos um link para o painel de administração. Nele, o usuário `carlos` é deletado, mais uma vez. ☠️☠️☠️
 
-Último desafio desta seção concluído.
+Último desafio concluído.
 
 ---
 
