@@ -23,11 +23,11 @@ No Caido, interceptei uma requisição de um formulário de login enviada pelo n
 
 Em outras palavras, _run_ num ataque de força bruta ao formulário de login!
 
-[Screenshot 1 do Automate](images/authentication-1.PNG)
+![Screenshot 1 do Automate](images/authentication-1.PNG)
 
 O mesmo, mais ou menos como demonstrado no Caido¹, poderia ser feito no Burp Suite, via Intruder. Teríamos, da mesma maneira, as credenciais de acesso, identificáveis pelo retorno `status 302`, `length 230`.
 
-[Screenshot 2 do Automate](images/authentication-2.PNG)
+![Screenshot 2 do Automate](images/authentication-2.PNG)
 
 Uma estratégia ainda mais simples e rápida poderia ser adotada: lançando um payload apenas para o campo `username`, chegaríamos logo a um... usuário válido. O mesmo vale para o campo `password`, mas, dessa vez, já teríamos a senha, completando as credenciais de acesso, sem testar algumas dezenas de senhas para cada um de algumas dezenas de usuários.
 
@@ -41,13 +41,13 @@ A primeira coisa que fiz foi logar com uma conta de usuário: a de Wiener, que, 
 
 Ao acessar o e-mail de Wiener, vemos o código de verificação necessário para validar o login, `0600`:
 
-[Screenshot do e-mail de Wiener](images/authentication-3.PNG)
+![Screenshot do e-mail de Wiener](images/authentication-3.PNG)
 
 Ao logar com a conta de Carlos, dá-se o mesmo: uma nova 2FA, mas, dessa vez, não temos acesso a e-mails nem ao código de verificação. **O que se espera num cenário como esse é que o acesso à conta só nos seja concedido após a verificação**, isto é, se passássemos pela 2FA. **O que nem sempre acontece**.
 
 Ao acessar a conta de Wiener, temos acesso a um painel que, presumo, seja comum aos usuários comuns, como... Carlos. Ao acessar a URL desse painel (`/my-account?id=carlos`) e, levando em consideração que, em tese, ainda precisávamos de um código, temos acesso também à conta de Carlos, nosso alvo. Feito!
 
-[Painel da conta de Carlos](images/authentication-4.PNG)
+![Painel da conta de Carlos](images/authentication-4.PNG)
 
 ----------
 
